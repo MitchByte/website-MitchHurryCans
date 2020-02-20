@@ -2,45 +2,52 @@
 .header {
     font-family: 'Rock Salt', cursive, monospace, Helvetica, sans-serif;
     font-weight: bold;
-    font-size:90px ;
-    
+    font-size:2.75em;
     padding: 10px;
-    margin:10px;   
+    margin:10px;  
+
 }
 
 html {
     background-image: url(images/sprenkel.jpg);
-    background-size: 100%;
+    background-repeat: repeat;
     text-align: center;
     position: relative;
     font-family: monospace, Helvetica, sans-serif;
+    
 }
 
 .i  {
-    margin-right: 30rem;
+    max-width: 600px;
     background-color: rgb(160, 53, 89);
     padding:20px;
     opacity: 0.80;
 }
 
 .a  {
-    margin-left: 30rem;
+    max-width: 600px;
+    justify-content: right;
     background-color: darkseagreen;
     padding:20px;
     opacity: 0.80;
 }
 
 .p  {
-    margin-right: 30rem;
+    max-width: 600px;
     background-color: lightsalmon;
     padding:20px;
     opacity: 0.90;
+    
+
+}
+
+.comic img, .illustration img, .wand img,  .workshop img{
+    max-width: 100%
 }
 
 .c  {
     background-color: thistle;
-    margin-right: 10rem;
-    margin-left:10rem;
+    max-width: 600px;
     padding: 10px;
     text-align: center;
     opacity: 0.80;
@@ -68,7 +75,8 @@ nav {
     background-color: rgb(172, 76, 108);
     padding: 10px;
     margin-bottom:10px;  
-    display: block;
+    display:block ;
+    max-width: 100%;
 
 
 }
@@ -81,8 +89,7 @@ nav {
     display:left;
     width: 150px;
     position: relative;
-    margin: 30px;
-    padding: 30px;
+    
     z-index: fixed;
 
 }
@@ -92,12 +99,12 @@ nav li {
     color: black;
     list-style: none;
     display:inline-block;
-    width: 150px;
+    width: 50%;
     text-align: center;
-    position: relative;
-    margin: 0px;
+    position: relative;    
 
 }
+
 
 .botton {
     text-align: center;
@@ -110,4 +117,52 @@ footer {
     padding: 2px;
     position: relative;
     opacity: 0.5;
+}
+
+@media (min-width:465px) {
+    .links {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        padding: 0px;
+    }
+    nav li {
+        padding:5px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-size: 4em;
+    }
+    .a {
+        margin-left: 50%;
+    }
+
+    .c {
+        justify-content: center;
+        margin: auto;
+    }
+
+    .p {
+        margin-right: 30%;
+        justify-content: space-around;
+        max-width: 100%;
+        
+    }
+
+    html {
+        background-size: 100%;
+        text-align: center;
+        position: relative;
+
+     
+    }
+}
+
+@media (min-width:950px) {
+    .header {
+        font-size: 5em;
+    }
 }
